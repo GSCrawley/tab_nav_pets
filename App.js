@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons, Fontawesome5 } from 'react-native-vector-icons';
 
 import  HomeScreen  from './components/HomeScreen';
-import  SettingScreen  from './components/SettingScreen';
+import  DetailScreen  from './components/DetaiilScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,7 +29,7 @@ export default function App() {
       })}
       >
     <Tab.Screen name="Home" component={HomeScreen} />
-    <Tab.Screen name="Settings" component={SettingScreen} />
+    <Tab.Screen name="Settings" component={DetailScreen} />
     </Tab.Navigator>
   </NavigationContainer>
 );

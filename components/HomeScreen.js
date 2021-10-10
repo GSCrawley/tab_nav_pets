@@ -1,15 +1,30 @@
-import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import React, { useState } from 'react';
+import { Text, View, StyleSheet, FlatList, Button, SafeAreaView } from 'react-native';
 
-export default function HomeScreen() {
+import { cats, dogs } from './breeds'
+
+
+export default function HomeScreen({ navigation }) {
+    const [ showCats, setshowCats ] = useStat(false);
+        
     return (
-      <View style={styles.container }>
-        <Icon name={'jedi-order'} size={5} color={'orange'} />
-        {/* style={styles.title}>Welcome Home! */}
-      </View>
-    );
-  }
+        <View style={styles.container}>
+                {/* style={styles.title}>Welcome Home! */}
+            <SafeAreaView>
+
+            <FlatList
+                style={styles.list}
+                data={showCats ? cats : dogs }
+                renderItem={( {item, index} ) => {
+                    return (
+
+                    )
+                }}
+                />
+            </SafeAreaView>
+            </View>
+            );
+        }
   
 const styles = StyleSheet.create({
     container: {
@@ -20,9 +35,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center', 
         backgroundColor:'lightgreen'
     },
-    // title: {
-    //     fontSize: 36, 
-    //     fontWeight: 'bold', 
-    //     color: 'orange'
-    // }
+    list: { 
+        flex:1, 
+        padding: 110, 
+        paddingTop: 20, 
+        marginBottom:40, 
+        backgroundColor:'lightblue' 
+    },
+    title: {
+        fontSize: 36, 
+        fontWeight: 'bold', 
+        color: 'orange'
+    }
 })

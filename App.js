@@ -2,9 +2,7 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons, FontAwesome5 } from 'react-native-vector-icons'
-import Icon from 'react-native-vector-icons/FontAwesome';
-// import { FontAwesome5 } from '@expo/vector-icons'; 
+import { Ionicons, Fontawesome5 } from 'react-native-vector-icons';
 
 import  HomeScreen  from './components/HomeScreen';
 import  SettingScreen  from './components/SettingScreen';
@@ -26,14 +24,12 @@ export default function App() {
             iconName = focused 
             ? 'dog' : 'dog'
           }
-          return <FontAwesome5 name={iconName} size={size} color={color} />;
+          return <Fontawesome5 name={iconName} size={size} color={color}/>;
         },
       })}
->
-
-
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={SettingScreen} />
+      >
+    <Tab.Screen name="Home" component={HomeScreen} />
+    <Tab.Screen name="Settings" component={SettingScreen} />
     </Tab.Navigator>
   </NavigationContainer>
 );
@@ -45,5 +41,5 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightgreen',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+  }
 });

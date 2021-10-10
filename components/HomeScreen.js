@@ -1,10 +1,12 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export default function HomeScreen() {
     return (
       <View style={styles.container }>
-        <Text style={styles.title}>Welcome Home!</Text>
+        <Icon name={'jedi-order'} size={5} color={'orange'} />
+        {/* style={styles.title}>Welcome Home! */}
       </View>
     );
   }
@@ -18,9 +20,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center', 
         backgroundColor:'lightgreen'
     },
-    title: {
-        fontSize: 36, 
-        fontWeight: 'bold', 
-        color: 'orange'
-    }
+    // title: {
+    //     fontSize: 36, 
+    //     fontWeight: 'bold', 
+    //     color: 'orange'
+    // }
 })

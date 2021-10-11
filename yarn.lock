@@ -2319,6 +2319,15 @@
   dependencies:
     "nanoid" "^3.1.23"
 
+"@react-navigation/stack@^6.0.10":
+  "integrity" "sha512-BaNtmkSIY18+kVbry5Pao2xys0imSWoEJ3KUdXmNv6iR9T8JNL74rf5ecUFVtcY9RBnEf9CvbDwudBYCCSLvSA=="
+  "resolved" "https://registry.npmjs.org/@react-navigation/stack/-/stack-6.0.10.tgz"
+  "version" "6.0.10"
+  dependencies:
+    "@react-navigation/elements" "^1.2.0"
+    "color" "^3.1.3"
+    "warn-once" "^0.1.0"
+
 "@segment/loosely-validate-event@^2.0.0":
   "integrity" "sha512-ZMCSfztDBqwotkl848ODgVcAmN4OItEWDCkshcKz0/W6gGSQayuuCtWV/MlodFivAZD793d6UgANd6wCXUfrIw=="
   "resolved" "https://registry.npmjs.org/@segment/loosely-validate-event/-/loosely-validate-event-2.0.0.tgz"
@@ -10824,7 +10833,7 @@
     "react-native-ratings" "8.0.4"
     "react-native-size-matters" "^0.3.1"
 
-"react-native-gesture-handler@*", "react-native-gesture-handler@^1.10.3":
+"react-native-gesture-handler@*", "react-native-gesture-handler@^1.10.3", "react-native-gesture-handler@>= 1.0.0":
   "integrity" "sha512-cBGMi1IEsIVMgoox4RvMx7V2r6bNKw0uR1Mu1o7NbuHS6BRSVLq0dP34l2ecnPlC+jpWd3le6Yg1nrdCjby2Mw=="
   "resolved" "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-1.10.3.tgz"
   "version" "1.10.3"

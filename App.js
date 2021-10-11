@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons, Fontawesome5 } from 'react-native-vector-icons';
 
-import  HomeScreen  from './components/HomeScreen';
-import  DetailScreen  from './components/DetaiilScreen';
+
+import  CatScreen  from './components/CatScreen';
+import  DogScreen  from './components/DogScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,30 +16,21 @@ export default function App() {
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
-          if (route.name === 'Home') {
-            iconName = focused 
-              ? 'cat'
-              : 'cat'
-          } else if (route.name === 'Settings') {
-            iconName = focused 
-            ? 'dog' : 'dog'
+          if (route.name === 'Cats') {
+            iconName = 'cat'
+          } else if (route.name === 'Dogs') {
+            iconName = 'dog'
           }
           return <Fontawesome5 name={iconName} size={size} color={color}/>;
         },
       })}
       >
-    <Tab.Screen name="Home" component={HomeScreen} />
-    <Tab.Screen name="Settings" component={DetailScreen} />
+
+      <Tab.Screen name='Cats' component={CatScreen} />    
+      <Tab.Screen name='Dogs' component={DogScreen} />
     </Tab.Navigator>
   </NavigationContainer>
+
 );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'lightgreen',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-});

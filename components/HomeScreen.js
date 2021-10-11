@@ -1,26 +1,30 @@
 import React, { useState } from 'react';
 import { Text, View, StyleSheet, FlatList, Button, SafeAreaView } from 'react-native';
+import Cell from './Cell'
 
-import { cats, dogs } from './breeds'
+import { cats, dogs } from '../breeds'
 
 
 export default function HomeScreen({ navigation }) {
-    const [ showCats, setshowCats ] = useStat(false);
+    const [ showCats, setshowCats ] = useState(false);
         
     return (
         <View style={styles.container}>
-                {/* style={styles.title}>Welcome Home! */}
             <SafeAreaView>
-
             <FlatList
                 style={styles.list}
                 data={showCats ? cats : dogs }
                 renderItem={( {item, index} ) => {
                     return (
-
-                    )
-                }}
-                />
+                        <Cell 
+                        // style={{color: 'darkblue'}}
+                        title={` ${item.breed} `} data={item} 
+                        showDetails={() => navigation.navigate('Details', { item })} 
+                        />
+                        )
+                      }}
+                      keyExtractor={(item) => item.breed}
+                    />
             </SafeAreaView>
             </View>
             );
@@ -45,6 +49,6 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 36, 
         fontWeight: 'bold', 
-        color: 'orange'
+        color: 'lightyellow'
     }
 })

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList } from 'react-native'
 import Cell from './Cell'
-import { dogs } from './breeds'
+import { dogs } from '../breeds'
 
 export default function ListDogs({navigation}) {
   return (

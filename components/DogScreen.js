@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack'
-import ListDogs from './ListDogs'
-import DetailScreen from './DetailScreen'
+import ListDogs from '../ListDogs'
+import DetailScreen from '../DetailScreen'
 
 const Stack = createStackNavigator()
 

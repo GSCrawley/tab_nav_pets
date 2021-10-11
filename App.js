@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons, Fontawesome5 } from 'react-native-vector-icons';
+// import { Ionicons, Fontawesome5 } from 'react-native-vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons'; 
 
 
 import  CatScreen  from './components/CatScreen';
@@ -21,7 +22,7 @@ export default function App() {
           } else if (route.name === 'Dogs') {
             iconName = 'dog'
           }
-          return <Fontawesome5 name={iconName} size={size} color={color}/>;
+          return <FontAwesome5 name={iconName} size={size} color={color}/>;
         },
       })}
       >

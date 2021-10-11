@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, ScrollView, SafeAreaView  } from 'react-native';
 
+
+
 export default function DetailScreen({ route }) {
   const { item } = route.params;
   const keys = Object.keys(item).filter(key => key != 'breed')
@@ -22,7 +24,7 @@ export default function DetailScreen({ route }) {
 
   const styles = StyleSheet.create({
     container: {
-      flexWrap: 2, 
+      flexWrap: 'wrap', 
       margin: 80, 
       padding: 40, 
       alignItems: 'center', 

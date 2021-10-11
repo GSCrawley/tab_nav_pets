@@ -12,4 +12,4 @@ export default function CatScreen() {
           <Stack.Screen name='Details' component={DetailScreen} />
         </Stack.Navigator>
     );
-  }                                                       w 
+  }                                                       

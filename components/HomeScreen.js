@@ -1,29 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Text, View, StyleSheet, FlatList, Button, SafeAreaView } from 'react-native';
 import Cell from './Cell'
-
 import { cats, dogs } from '../breeds'
 
 
 export default function HomeScreen({ navigation }) {
     const [ showCats, setshowCats ] = useState(false);
-        
+    const renderItem=( {item, index} ) => (
+            <Cell 
+            // style={{color: 'darkblue'}}
+            title={` ${item.breed} `} data={item} 
+            showDetails={() => navigation.navigate('Details', { item })} 
+            />
+            )
+    const memoizedValue = useMemo(() => renderItem, [showCats])
     return (
         <View style={styles.container}>
             <SafeAreaView>
             <FlatList
                 style={styles.list}
                 data={showCats ? cats : dogs }
-                renderItem={( {item, index} ) => {
-                    return (
-                        <Cell 
-                        // style={{color: 'darkblue'}}
-                        title={` ${item.breed} `} data={item} 
-                        showDetails={() => navigation.navigate('Details', { item })} 
-                        />
-                        )
-                      }}
-                      keyExtractor={(item) => item.breed}
+                renderItem={ memoizedValue }
+                keyExtractor={(item) => item.breed}
                     />
             </SafeAreaView>
             </View>

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, ScrollView, SafeAreaView  } from 'react-native';
+import  FeatureView  from './FeatureView'
 
 
-
-export default function DetailScreen({ route }) {
+export default function Details({ route }) {
   const { item } = route.params;
   const keys = Object.keys(item).filter(key => key != 'breed')
     
@@ -11,13 +11,13 @@ export default function DetailScreen({ route }) {
     <SafeAreaView>
 
       <View style={styles.container}>
-        <Text style={styles.item}>Details!</Text>
-        <ScrollView>
-        {keys.map(key => <FeatureView name={[key]} value={item[key]} key={[key]}/>)}
+        <Text style={styles.item}>{ item.breed }</Text>
+        <ScrollView>                                                                
+        {keys.map(key => <FeatureView name={key} value={item[key]} key={[key]}/>)}
         </ScrollView>
         
-      </View>
-      </SafeAreaView>
+            </View>
+              </SafeAreaView>
 
     );
   }
@@ -32,9 +32,9 @@ export default function DetailScreen({ route }) {
       backgroundColor: 'lightblue' 
     },
     item: {
-      fontSize: 32, 
+      fontSize: 20, 
       margin:20,
       justifyContent: 'center',  
-      color: 'lightgreen' 
+      color: 'blue' 
     }
   })

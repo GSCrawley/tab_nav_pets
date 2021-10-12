@@ -1,13 +1,14 @@
-import React from 'react' 
+import React, { Component } from 'react' 
 import { View, Text } from 'react-native'
+import { cats, dogs, petTypes } from '../breeds'
 
 export default function FeatureView({ name, value }) {   
         return (
             <View style={{ 
-                justifyContent: 'space-between', 
+                justifyContent: 'center', 
                 flexDirection: 'row',
-                backgroundColor: 'pink',
-                width: '80%',
+                backgroundColor: 'white',
+                width: '90%',
                 // marginRight: 20 ,
                 // marginLeft: 20,
                 padding: 5,
@@ -19,12 +20,12 @@ export default function FeatureView({ name, value }) {
                 <Text style={{
                     fontSize: 16,
                     color: 'darkblue'
-                }}>{name}</Text> 
+                }}>{name.petTypes}</Text> 
 
                 <Text style={{
                     fontSize: 18,
                     color: 'darkblue'
-                }}>{value}</Text>
+                }}>{value.petTypes}</Text>
              
             </View>
         

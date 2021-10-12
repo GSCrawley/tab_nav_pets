@@ -2,7 +2,7 @@ import React from 'react'
 import { TouchableHighlight, Text } from 'react-native' 
 
 
-function Cell({ title, showDetails }) {
+function Cell({ title, showDetails  }) {
 
     return (
         <TouchableHighlight

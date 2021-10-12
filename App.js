@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import { Ionicons, Fontawesome5 } from 'react-native-vector-icons';
@@ -10,7 +10,8 @@ import  DogScreen  from './components/DogScreen';
 
 const Tab = createBottomTabNavigator();
 
-export default function App() {
+export default class App extends React.Component {
+  render() {
   return (
   <NavigationContainer>
     <Tab.Navigator
@@ -34,4 +35,4 @@ export default function App() {
 
 );
 }
-
+}

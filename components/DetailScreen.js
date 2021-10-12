@@ -9,15 +9,13 @@ export default function Details({ route }) {
     
   return (
     <SafeAreaView>
-
       <View style={styles.container}>
         <Text style={styles.item}>{ item.breed }</Text>
         <ScrollView>                                                                
-        {keys.map(key => <FeatureView name={key} value={item[key]} key={[key]}/>)}
+        {keys.map(key => <FeatureView style={styles.list} name={[key]} value={item[key]} key={[key]}/>)}
         </ScrollView>
-        
-            </View>
-              </SafeAreaView>
+          </View>
+            </SafeAreaView>
 
     );
   }
@@ -36,5 +34,11 @@ export default function Details({ route }) {
       margin:20,
       justifyContent: 'center',  
       color: 'blue' 
+    },
+    list: {
+      fontSize: 12,
+      margin: 5,
+      justifyContent: 'space-evenly',
+      color: 'black'
     }
   })

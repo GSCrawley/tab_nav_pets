@@ -1,6 +1,5 @@
 import React, { Component } from 'react' 
 import { View, Text } from 'react-native'
-import { cats, dogs, petTypes } from '../breeds'
 
 export default function FeatureView({ name, value }) {   
         return (
@@ -20,12 +19,12 @@ export default function FeatureView({ name, value }) {
                 <Text style={{
                     fontSize: 16,
                     color: 'darkblue'
-                }}>{name.petTypes}</Text> 
+                }}>{name}</Text> 
 
                 <Text style={{
                     fontSize: 18,
                     color: 'darkblue'
-                }}>{value.petTypes}</Text>
+                }}>{value}</Text>
              
             </View>
         

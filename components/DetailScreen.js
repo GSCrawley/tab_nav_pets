@@ -23,22 +23,25 @@ export default function Details({ route }) {
   const styles = StyleSheet.create({
     container: {
       flexWrap: 'wrap', 
-      margin: 80, 
-      padding: 40, 
+      margin: 20, 
+      padding: 20, 
       alignItems: 'center', 
-      justifyContent: 'center', 
+      justifyContent: 'space-evenly', 
       backgroundColor: 'lightblue' 
     },
     item: {
-      fontSize: 20, 
+      fontSize: 30, 
       margin:20,
       justifyContent: 'center',  
-      color: 'blue' 
+      color: 'black',
+      backgroundColor:'lightyellow'
+
     },
     list: {
       fontSize: 12,
-      margin: 5,
-      justifyContent: 'space-evenly',
-      color: 'black'
-    }
+      margin: 10,
+      // marginLeft: 80,
+      justifyContent: 'center',
+      color: 'blue'
+        }
   })
